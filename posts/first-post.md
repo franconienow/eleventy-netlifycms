@@ -1,7 +1,8 @@
 ---
 layout: layouts/post.njk
-title: My first post
-description: Mussum Ipsum, cacilds vidis litro abertis. Delegadis gente finis, bibendum egestas augue arcu ut est. Praesent malesuada urna nisi, quis.
+title: Editado pelo CMS
+description: Mussum Ipsum, cacilds vidis litro abertis. Delegadis gente finis,
+  bibendum egestas augue arcu ut est. Praesent malesuada urna nisi, quis.
 date: 2020-11-24
 featuredImage: /images/uploads/image1.jpg
 ---

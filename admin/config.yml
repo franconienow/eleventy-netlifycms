@@ -1,10 +1,10 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: franconienow/eleventy-netlifycms
   branch: main
-
+  base_url: https://aqueous-tundra-69133.herokuapp.com
 media_folder: "_site/images/uploads"
 public_folder: "/images/uploads"  
-
 collections:
   - name: "posts"
     label: "Posts"

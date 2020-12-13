@@ -10,7 +10,7 @@ jobs:
           command: npm install
       - run: 
           name: Build
-          command: npx eleventy
+          command: npx @11ty/eleventy
       - run: 
           name: Deploy
           command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"    

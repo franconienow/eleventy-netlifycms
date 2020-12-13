@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-title: My second post
+title: Meu segundo post
 description: Mussum Ipsum, cacilds Praesent malesuada urna nisi, quis.
 date: 2020-11-22
 featuredImage: /images/uploads/image2.jpg

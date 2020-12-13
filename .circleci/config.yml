@@ -1,5 +1,6 @@
 version: 2.1
-build:
+jobs:
+  build:
   docker: 
     - image: circleci/node@3.0.0
   steps: 
@@ -12,5 +13,9 @@ build:
       command: npx eleventy  
     - run:
       name: Firbase Deploy
-      command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"      
-
+      command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
+workflows:
+  build:
+    jobs:
+      - build
+  

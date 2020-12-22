@@ -1,11 +1,21 @@
-<html>
+<html lang="pt-BR">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ '/assets/css/index.css' | url }}">
     <title>Eleventy Example</title>
-     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
   </head>
   <body>
-    <h1 class="blue">Eleventy Example</h1>
-    <h1 class="home"><a href="{{ '/posts' | url }}">Posts</a></h1>
+    <header>
+      <main>
+        <a href="{{ '/pages/home' | url }}"><h3>Site do Ocit</h3></a>
+        <div>
+          <a href="{{ '/pages/parallax' | url }}">Parallax</a>
+          <a href="{{ '/pages/about' | url }}">Sobre o clã</a>
+          <a href="{{ '/posts' | url }}">Posts</a>
+        </div>
+      <main>
+    </header>
     {{ content | safe }}
   </body>
 </html>

@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+---
+<main>
+  <section class="cards-container">
+    {% for child in p  %}
+    <div class="card">
+      <h2>{{ child.people.name | safe }}</h2>
+      <h3>{{ child.people.desc | safe }}</h3>
+    </div>
+    {% endfor %}
+    {{ content | safe }}
+  </section>
+</main>
+

@@ -18,3 +18,16 @@ collections:
       - { label: "Date", name: "date", widget: "date", default: "" }
       - { label: "Post Body", name: "body", widget: "markdown" }
       - { label: "Featured Image", name: "featuredImage", widget: "image" }
+  - name: "general"
+    label: "Conteúdos do Site"
+    files: 
+      - label: "Página Membros"
+        name: "about"
+        file: 'src/pages/about.md'
+          fields:
+            - label: 'card'
+              name: 'metadata'
+              widget: 'object'
+              fields:
+                - { label: 'Meta Title', name: 'title', widget: 'string' }
+                - { label: 'Meta Description', name: 'description', widget: 'text', required: false }     

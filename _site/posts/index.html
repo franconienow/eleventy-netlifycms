@@ -1,17 +1,26 @@
 <html>
   <head>
     <title>Eleventy Example</title>
-     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/index.css">
   </head>
   <body>
-    <h1 class="blue">Eleventy Example</h1>
-    <h1 class="home"><a href="/posts">Posts</a></h1>
-    
+    <header class="container bg-gainsboro">
+      <nav class="nav-bar">
+        <a href="/"><h1 class="logo">Eleventy Example</h1></a>
+          <div class="items">
+            <a href="/posts">Posts</a>
+            <a href="/games">Games</a>
+          </div>
+      </nav>
+    </header>
+    <main class="container bg-light">
+      
 <ul>
   
     <li>
       <strong>
-        <a href="/posts/second-post/">My second post</a>
+        <a href="/posts/second-post/">Meu segundo post</a>
       </strong>
       -
       <span>
@@ -39,6 +48,30 @@
       </span>
     </li>
   
+    <li>
+      <strong>
+        <a href="/posts/2020-12-13-um-novo-post-para-testar-o-circleci/">Um novo Post para testar o CircleCI</a>
+      </strong>
+      -
+      <span>
+        flajfçlaksj
+      </span>
+    </li>
+  
+    <li>
+      <strong>
+        <a href="/posts/2020-12-12-post-feito-pelo-cms-com-oauth-do-github/">Post feito pelo CMS com OAuth do Github</a>
+      </strong>
+      -
+      <span>
+        falkjfalskjdf
+      </span>
+    </li>
+  
 </ul>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+    <script src="../js/app.js" defer></script>
   </body>
 </html>

@@ -1,0 +1,15 @@
+---
+permalink: /algolia.json
+---
+
+{% set posts = collections.posts %}
+[
+{% for post in posts %}
+  {
+    "title": {{ post.data.title | jsonify | safe }},
+		"date":"{{ page.date }}",
+		"url":"http://localhost:8080{{ post.url }}",
+		"content":{{ post.templateContent | algExcerpt | jsonify | safe }}
+  }{%- if loop.index < posts | length %},{%- endif %}  
+{% endfor %}
+]

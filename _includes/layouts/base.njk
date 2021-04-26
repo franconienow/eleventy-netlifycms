@@ -1,11 +1,24 @@
 <html>
   <head>
     <title>Eleventy Example</title>
-     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/index.css">
   </head>
   <body>
-    <h1 class="blue">Eleventy Example</h1>
-    <h1 class="home"><a href="{{ '/posts' | url }}">Posts</a></h1>
-    {{ content | safe }}
+    <header class="container bg-gainsboro">
+      <nav class="nav-bar">
+        <a href="/"><h1 class="logo">Eleventy Example</h1></a>
+          <div class="items">
+            <a href="/posts">Posts</a>
+            <a href="/games">Games</a>
+          </div>
+      </nav>
+    </header>
+    <main class="container bg-light">
+      {{ content | safe }}
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
+    <script src="../js/app.js" defer></script>
   </body>
 </html>

@@ -1,34 +1,24 @@
-// Initialize Cloud Firestore through Firebase
-firebase.initializeApp({
-  apiKey: "AIzaSyB1rMhlqq6FWYZpFvhxE8md-lvT2hxOIFA",
-  authDomain: "eleventy-netlifycms-project.firebaseapp.com",
-  projectId: "eleventy-netlifycms-project",
-  storageBucket: "eleventy-netlifycms-project.appspot.com",
-  messagingSenderId: "59016517056",
-  appId: "1:59016517056:web:3d02734f288445879b6425"
-});
+// const client = algoliasearch("HSITM1M4MJ", "7663b5d9eb94f132c2e82f71827eea2b");
+// const index = client.initIndex("eleventy_test");
 
-let db = firebase.firestore();
+// const input = document.querySelector(".alg-search");
+// const resultsList = document.querySelector(".results");
 
-const initGamesList = () => {
-  db.collection("games").get().then((querySnapshot) => {
-    const gamesList = [];
-    querySnapshot.forEach((doc) => {
-      gamesList.push(doc.data())
-    });
-    pupulateGamesList(gamesList);
-  });
-  
-  const pupulateGamesList = (games) => {
-    const list = document.querySelector(".games-list");
-    games.forEach(game => {
-      const line = document.createElement("li");
-      line.innerHTML = game.name;
-      list.appendChild(line);
-    })
-  };
-};
+// const doSearch = async (exp) => {
+//   let list = "";
+//   index.search(exp).then(({ hits }) => {
+//     console.log(hits);
+//     hits.forEach((hit) => {
+//       list += `<li><a href="${hit.url}">${hit.title}</a></li>`;
+//     });
+//     resultsList.innerHTML = list;
+//   });
+// };
 
-if (document.querySelector(".games-list")){
-  initGamesList();
-};
+// input.addEventListener("keyup", (e) => {
+//   doSearch(e.target.value);
+// });
+
+if (document.querySelector(".alg-search")){
+  new AlgoliaSearch();
+}

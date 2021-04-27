@@ -4,6 +4,10 @@ body{
 a{
   text-decoration: none;
 }
+h2{
+  font-size: 1.5rem;
+  color: chocolate;
+}
 .container{
   padding-left: 15%;
   padding-right: 15%;
@@ -29,4 +33,12 @@ a{
 
 .nav-bar .items > a{
   padding-right: 15px;
+}
+
+.alg-search{
+  margin: 1rem 0 1rem 0;
+}
+
+.results-container{
+  padding: 1rem 0 1rem 0;
 }

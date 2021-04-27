@@ -16,6 +16,9 @@
     </header>
     <main class="container bg-light">
       
+<h2 class="sub">Barra de busca como Algolia Search:</h2>
+<input type="text" class="alg-search" placeholder="Procure por um assunto">
+<div class="results-container"><ul class="results"></ul></div>
 <ul>
   
     <li>
@@ -70,8 +73,8 @@
   
 </ul>
     </main>
-    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-firestore.js"></script>
-    <script src="../js/app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js"></script>
+    <script src="/js/AlgoliaSearch.js" defer></script>
+    <script src="/js/app.js" defer></script>
   </body>
 </html>

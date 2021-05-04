@@ -1,6 +1,7 @@
 ---
-layout: layouts/base.njk
+layout: layouts/home.njk
 permalink: /
+title: Playground para testar o 11ty
 ---
 
 <p>Mussum Ipsum, cacilds vidis litro abertis. Delegadis gente finis, 

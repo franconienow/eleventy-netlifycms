@@ -4,21 +4,32 @@ class AlgoliaSearch{
     this.index = this.client.initIndex('eleventy_test');
     this.input = document.querySelector('.alg-search');
     this.resultsList = document.querySelector('.results');
+    this.resultsContainer = document.querySelector('.algolia-results-container');
     this.init();
   }
 
   init(){
-    this.input.addEventListener('keyup', e => {
-      this.doSearch(e.target.value);
+    this.input.addEventListener('input', e => {
+      if(!e.target.value == ''){
+        this.doSearch(e.target.value);    
+      }else{
+        this.resultsContainer.classList.remove('show')
+      }
     });
   }
 
   async doSearch(exp){
+    this.resultsList.innerHTML = '';
     let list = '';
     this.index.search(exp).then(({ hits }) => {
-      console.log(hits)
+      if(hits == false){
+        this.resultsContainer.classList.remove('show')
+      }else{
+        this.resultsContainer.classList.add('show')
+      }
       hits.forEach( hit => {
-        list+=`<li><a href="${hit.url}">${hit.title}</a></li>`
+        const highlights = hit._highlightResult;
+        list+=`<div><a href="${hit.url}">${highlights.title.value}</a></div>`
       });
       this.resultsList.innerHTML = list;
     });

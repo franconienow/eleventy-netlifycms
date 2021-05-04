@@ -1,16 +1,22 @@
-<h2 class="sub">Barra de busca como Algolia Search:</h2>
-<input type="text" class="alg-search" placeholder="Procure por um assunto">
-<div class="results-container"><ul class="results"></ul></div>
-<ul>
-  {% for post in postslist %}
-    <li>
-      <strong>
-        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-      </strong>
-      -
-      <span>
-        {{ post.data.description }}
-      </span>
-    </li>
-  {% endfor %}
-</ul>
+<section>
+  <div class="container py-3">
+    <h2 class="sub">Barra de busca como Algolia Search</h2>
+    <input type="text" class="form-control w-50 alg-search" placeholder="Procure por um assunto">
+    <div class="position-absolute rounded border bg-white algolia-results-container"><div class="results p-3"></div></div>
+  </div>
+</section>
+
+<section class="pt-5">
+  <div class="container d-flex flex-wrap justify-content-between gap-4">
+    {% for post in postslist %}
+      <div class="card" style="width: 18rem;">
+        <img src="{{ post.data.featuredImage }}" class="card-img-top" alt="{{ post.data.title }}">  
+        <div class="card-body">
+          <h5 class="card-title">{{ post.data.title }}</h5>
+          <p class="card-text">{{ post.data.description }}</p>
+          <a href="{{ post.url | url }}" class="btn btn-primary">Leia mais</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>

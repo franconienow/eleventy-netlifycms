@@ -3,7 +3,7 @@ layout: layouts/post.njk
 title: Post feito pelo CMS
 description: Olha que massa!
 date: 2020-11-24T03:00:00.000Z
-featuredImage: /images/uploads/jarek-ceborski-jn7uvecdf6u-unsplash.jpg
+featuredImage: http://lorempixel.com.br/700/500?3
 ---
 Mussum Ipsum, cacilds vidis litro abertis. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Paisis, filhis, espiritis santis. Atirei o pau no gatis, per gatis num morreus. Não sou faixa preta cumpadi, sou preto inteiris, inteiris.
 

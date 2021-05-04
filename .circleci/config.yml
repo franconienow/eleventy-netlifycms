@@ -14,6 +14,12 @@ jobs:
       - run: 
           name: Deploy
           command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"    
+      - run: 
+          name: Install curl
+          command: sudo apt install curl    
+      - run: 
+          name: Update Algolia Search
+          command: curl -v https://us-central1-eleventy-netlifycms-project.cloudfunctions.net/algoliaIndexer    
 workflows:
   build_and_test:
     jobs:

@@ -2,6 +2,9 @@
 layout: layouts/home.njk
 permalink: /
 title: Playground para testar o 11ty
+blueBox: Mussum Ipsum, cacilds vidis litro abertis
+redBox: Delegadis gente finis, bibendum egestas 
+greenBox: Mece receita de bolis, mais bolis eu num gostis.
 ---
 
 <p>Mussum Ipsum, cacilds vidis litro abertis. Delegadis gente finis, 

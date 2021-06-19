@@ -18,3 +18,13 @@ collections:
       - { label: "Date", name: "date", widget: "date", default: "" }
       - { label: "Post Body", name: "body", widget: "markdown" }
       - { label: "Featured Image", name: "featuredImage", widget: "image" }
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Home"
+        name: "home"
+        file: "pages/home.md"
+        fields:
+          - { label: Blue box label, name: blueBox, widget: string }
+          - { label: Red box label, name: redBox, widget: string }
+          - { label: Green box label, name: greenBox, widget: string }

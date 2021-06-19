@@ -1,0 +1,14 @@
+{% macro render(title, subtitle, btn, settings) %}
+  <section style="background: {{ settings.bg }}; color: {{ settings.color }};">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-6 mx-auto text-center">
+          <h2>{{ title }}</h2>
+          <p class="fs-5">{{ subtitle }}</p>
+          <a style="background: {{ btn.settings.bg }}; color: {{ btn.settings.color }};"
+            class="btn" href="{{ btn.url | safe }}">{{ btn.label }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endmacro %}

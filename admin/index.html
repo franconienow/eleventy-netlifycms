@@ -8,5 +8,26 @@
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <script>
+    CMS.registerPreviewStyle("./custom.css");
+  </script>
+  <script>
+    var HomePreview = createClass({
+      render: function() {
+        var entry = this.props.entry;
+        var blueBoxContent = entry.getIn(['data', 'blueBox']);
+        var redBoxContent = entry.getIn(['data', 'redBox']);
+        var greenBoxContent = entry.getIn(['data', 'greenBox']);
+        console.log(blueBoxContent, redBoxContent, greenBoxContent)
+        return h('div', {},
+          h('div', { className: "someClass" }, blueBoxContent),
+          h('div', {}, redBoxContent),
+          h('div', {}, greenBoxContent),
+        );
+      }
+    });
+
+    CMS.registerPreviewTemplate("home", HomePreview);
+</script>
 </body>
 </html>

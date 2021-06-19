@@ -1,17 +1,22 @@
 ---
-layout: layouts/home.njk
+layout: layouts/homeController.11ty.js
 permalink: /
 title: Playground para testar o 11ty
-blueBox: Mussum Ipsum, cacilds vidis litro abertis
-redBox: Delegadis gente finis, bibendum egestas 
-greenBox: Mece receita de bolis, mais bolis eu num gostis.
+cta:
+  variant: 1
+  props:
+    title: Mussum Ipsum, cacilds vidis litro abertis.
+    subtitle: Delegadis gente finis, bibendum egestas augue arcu ut est. Praesent malesuada urna nisi.
+    btn: 
+      label: Botão
+      url: '/'
+  settings:
+    general:
+      bg: '#2b36ad'
+      color: '#f7f7f7'
+    btn:
+      bg: '#f7f7f7'
+      color: '#2b36ad'    
 ---
-
-<p>Mussum Ipsum, cacilds vidis litro abertis. Delegadis gente finis, 
-bibendum egestas augue arcu ut est. Praesent malesuada urna nisi, quis 
-volutpat erat hendrerit non. Nam vulputate dapibus. Interessantiss quisso 
-pudia ce receita de bolis, mais bolis eu num gostis. Mais vale um bebadis 
-conhecidiss, que um alcoolatra anonimis.
-</p>
 
 
